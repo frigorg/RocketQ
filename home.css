@@ -1,167 +1,13 @@
-/* VARIABLES */
-
-:root {
-    --hue: 216;
-    --main-color: hsla(var(--hue), 100%, 60%, 1);
-    --main-color-fadded: hsla(var(--hue), 31%, 72%, 1);
-    --main-color-hover: hsla(var(--hue), 100%, 66%, 1);
-    --light-color: hsla(var(--hue), 100%, 94%, 1);
-    --light-color-fadded: hsla(var(--hue), 22%, 38%, 0.1);
-    --overlay-color: hsla(217, 62%, 4%, 0.8);
-    --highlight-color: hsla(350, 79%, 58%, 1);
-    --highlight-color-hover: hsla(350, 79%, 64%, 1);
-    --background-color: hsla(216, 100%, 99%, 1);
-    --icons-details: hsla(216, 31%, 72%, 1);
-
-    --text-color: hsla(237, 71%, 18%, 1);
-    --text-color2: hsla(0, 0%, 98%, 1);
-    --text-color3: hsla(var(--hue), 100%, 60%, 1);
-    --text-color-fadded: hsla(216, 31%, 72%, 1);
-
-    --font-title: 'Poppins', sans-serif;
-    --font-common: 'Open Sans', sans-serif;
-}
-
-/* RESET */
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-button {
-    border: 0;
-    border-radius: 0;
-    background-color: transparent;
-    font: inherit;
-    cursor: pointer;
-}
-
-a {
-    color: inherit;
-    text-decoration: inherit;
-    font: inherit;
-}
-
-/* GENERAL */
-
-html {
-    font-size: 62.5%;
-}
-
-body {
-    overflow: hidden;
-    height: 100vh;
-    width: 100vw;
-    background-color: var(--background-color);
-}
-
-body,
-button,
-input,
-textarea {
-    font-size: clamp(14px, 1.6rem, 2vw);
-    font-family: var(--font-common);
-}
-
-h2 {
-    font-size: 2.8rem;
-    font-weight: bold;
-    font-family: var(--font-title);
-}
-
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    top: -1px;
-    left: -1px;
-    overflow: hidden;
-    white-space: nowrap;
-}
-
-
-.btn {
-    display: flex;
-    width: 100%;
-    padding: 1.5rem 0;
-    font-size: 1.6rem;
-    font-weight: 500;
-    border-radius: 0.8rem;
-    align-items: center;
-    justify-content: center;
-}
-
-.btn i {
-    margin-right: 1rem;
-}
-
-.btn_colorful {
-    color: var(--background-color);
-    background-color: var(--main-color);
-}
-
-.btn_colorful:hover {
-    background-color: var(--main-color-hover);
-}
-
-.btn_white {
-    color: var(--main-color);
-    background-color: var(--background-color);
-    border: 2px solid var(--main-color);
-}
-
-.btn_white:hover {
-    color: var(--main-color-hover);
-    border: 2px solid var(--main-color-hover);
-}
-
-.form {
-    display: flex;
-    width: 100%;
-    padding: 1.5rem 1.6rem;
-    font-size: 1.6rem;
-    align-items: center;
-    justify-content: left;
-    border: 2px solid;
-    border-radius: 0.8rem;
-    border-color: var(--icons-details);
-    color: var(--text-color-fadded);
-}
-
-.form:valid {
-    border-color: var(--main-color);
-    color: var(--text-color);
-}
-
-.divider {
-    display: flex;
-    text-align: center;
-    font-size: 1.6rem;
-    color: var(--icons-details);
-    align-items: center;
-}
-
-.divider::before,
-.divider::after {
-    content: '';
-    display: block;
-    height: 2px;
-    width: 100%;
-    margin: 0 1rem;
-    background-color: var(--icons-details);
-}
-
 /* HOME */
 
 .content {
     display: grid;
+    height: 100vh;
     grid-template-columns: 50% 50%;
     grid-template-rows: 11.4rem 1fr;
     grid-template-areas:
         'header header'
-        'left right';
+        'left right'
 }
 
 /* HEADER */
@@ -177,9 +23,7 @@ h2 {
 .bg-image {
     z-index: -1;
     grid-area: left;
-    width: 100%;
     background: url(assets/img/bg_ilustration.svg) no-repeat top/contain;
-    background-position-x: -1rem;
 }
 
 .bg-circle::after {
