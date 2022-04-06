@@ -1,0 +1,66 @@
+/* HOME */
+
+.content {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 11.4rem 1fr 2fr;
+    grid-template-areas:
+        'header'
+        'input'
+        'cards'
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* HEADER */
+
+#header {
+    padding: 3.5rem 0;
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+#header .room-code {
+    display: inline-flex;
+    width: 13.4rem;
+}
+
+#header .room-create {
+    display: inline-flex;
+    width: 17.3rem;
+}
+
+.sign-in input::-webkit-outer-spin-button,
+.sign-in input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.sign-in input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/* INPUT */
+
+#input {
+    grid-area: input;
+}
+
+#input > h2 {
+    margin-bottom: 2.4rem;
+}
+
+#input .input-area {
+    height: 13.4rem;
+}
+
+/* CARDS */
+
+
