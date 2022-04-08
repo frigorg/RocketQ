@@ -31,26 +31,99 @@
                     <i class="icon-copy"></i>
                 </div>
                 <div class="room-create btn btn_colorful">
-                    <i class="icon-user"></i>
+                    <i class="icon-users"></i>
                     Criar Sala
                 </div>
             </div>
         </header>
         <div id="input" class="container">
             <h2>Faça sua pergunta</h2>
-            <form action="">
+            <form class="form" action="">
                 <label class="sr-only" for="question">Pergunta para ser feita</label>
-                <input class="input-area" id="question" type="text" placeholder="O que você quer perguntar?">
-                <div class="info">
-                    <i class="icon-lock"></i>
-                    Esta Pergunta é anônima
+                <textarea class="input-area" id="question" placeholder="O que você quer perguntar?"></textarea>
+                <div class="footer">
+                    <div class="info">
+                        <i class="icon-lock"></i>
+                        Esta pergunta é anônima
+                    </div>
+                    <input type="submit" class="btn-enviar btn btn_colorful" value="Enviar">
                 </div>
-                <button class="btn btn_colorful">
-                    Enviar
-                </button>
             </form>
         </div>
-        <div id="cards">
+        <div id="cards" class="container">
+
+            <div class="card card_unread">
+                <div class="question">
+                    <div class="avatar">
+                        <i class="icon-user"></i>
+                        <img>
+                    </div>
+                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto dolores aut
+                        aliquam minima voluptatum fugiat rem, velit optio. Deserunt facilis numquam provident officia,
+                        fuga ea!</p>
+                </div>
+                <div class="buttons">
+                    <div class="read">
+                        <i class="icon-check"></i>
+                        Marcar como lida
+                    </div>
+                    <div class="trash">
+                        <i class="icon-trash"></i>
+                        Excluir
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card card_unread">
+                <div class="question">
+                    <div class="avatar">
+                        <i class="icon-user"></i>
+                        <img>
+                    </div>
+                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto dolores aut
+                        aliquam minima voluptatum fugiat rem, velit optio. Deserunt facilis numquam provident officia,
+                        fuga ea!</p>
+                </div>
+                <div class="buttons">
+                    <div class="read">
+                        <i class="icon-check"></i>
+                        Marcar como lida
+                    </div>
+                    <div class="trash">
+                        <i class="icon-trash"></i>
+                        Excluir
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card card_read">
+                <div class="question">
+                    <div class="avatar">
+                        <i class="icon-user"></i>
+                        <img>
+                    </div>
+                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto dolores aut
+                        aliquam minima voluptatum fugiat rem, velit optio. Deserunt facilis numquam provident officia,
+                        fuga ea!</p>
+                </div>
+                <div class="buttons">
+                    <div class="read">
+                        <i class="icon-check"></i>
+                        Pergunta lida
+                    </div>
+                    <div class="unread">
+                        <i class="icon-check"></i>
+                        Marcar como lida
+                    </div>
+                    <div class="trash">
+                        <i class="icon-trash"></i>
+                        Excluir
+                    </div>
+                </div>
+            </div>
+
 
         </div>
     </div>

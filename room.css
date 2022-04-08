@@ -2,9 +2,8 @@
 
 .content {
     display: grid;
-    height: 100vh;
     grid-template-columns: 1fr;
-    grid-template-rows: 11.4rem 1fr 2fr;
+    grid-template-rows: 11.4rem 1fr min(1fr);
     grid-template-areas:
         'header'
         'input'
@@ -49,18 +48,133 @@
 
 /* INPUT */
 
-#input {
+#input .form {
+    position: relative;
     grid-area: input;
+    border: 2px solid var(--icons-details);
+    border-radius: 0.8rem;
 }
 
-#input > h2 {
+#input>h2 {
     margin-bottom: 2.4rem;
 }
 
 #input .input-area {
-    height: 13.4rem;
+    border: none;
+    outline: none;
+    resize: none;
+
+    color: var(--text-color);
+
+    height: 6.5rem;
+}
+
+#input .footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+#input .info {
+    margin-top: 2.5rem;
+    margin-left: 1.6rem;
+    color: var(--icons-details);
+}
+
+#input .btn-enviar {
+    width: 9.8rem;
+    border: none;
+    margin-top: 1rem;
+    margin-right: 1.6rem;
+    margin-bottom: 1.6rem;
 }
 
 /* CARDS */
 
+#cards {
+    margin-top: 1.6rem;
+    grid-area: cards;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
 
+#cards .card {
+    height: 13.6rem;
+    border-radius: 0.8rem;
+    border-top-left-radius: 0;
+}
+
+#cards .question {
+    margin: 2.4rem;
+    display: flex;
+}
+
+#cards .question .avatar {
+    position: relative;
+    width: 5.2rem;
+    height: 5.2rem;
+    line-height: 5.2rem;
+    margin-right: 1.6rem;
+    border-radius: 50%;
+    font-size: 2.4rem;
+    color: var(--background-color);
+    text-align: center;
+    flex-shrink: 0;
+}
+
+#cards .question .avatar img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+}
+
+#cards .card.card_unread {
+    background-color: var(--light-color);
+}
+
+#cards .card.card_unread .question .avatar {
+    background-color: var(--main-color);
+}
+
+#cards .card.card_read {
+    background-color: var(--light-color-fadded);
+}
+
+#cards .card.card_read .question .avatar {
+    background-color: var(--main-color-fadded);
+}
+
+#cards .card.card_read .trash {
+    display: none;
+}
+
+#cards .card.card_read .unread {
+    display: none;
+}
+
+#cards .card.card_read {
+    background-color: var(--light-color-fadded);
+}
+
+#cards .buttons {
+    display: flex;
+    margin: 0 2.4rem;
+    gap: 2.4rem;
+    font-size: 1.6rem;
+    justify-content: end;
+}
+
+#cards .buttons i {
+    font-size: 2.4rem;
+}
+
+#cards .icon-check {
+    color: var(--main-color);
+}
+
+#cards .icon-trash {
+    color: var(--highlight-color);
+}
