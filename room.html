@@ -22,155 +22,177 @@
 </head>
 
 <body>
-        <header id="header" class="container">
-            <img class="logo" src="assets/img/logo.svg">
-            <div class="buttons">
-                <div class="room-code btn btn_white">
-                    #323243
-                    <i class="icon-copy"></i>
+    <header id="header" class="container">
+        <img class="logo" src="assets/img/logo.svg">
+        <div class="buttons">
+            <div class="room-code btn btn_white">
+                #323243
+                <i class="icon-copy"></i>
+            </div>
+            <div class="room-create btn btn_colorful">
+                <i class="icon-users"></i>
+                Criar Sala
+            </div>
+        </div>
+    </header>
+    <div id="input" class="container">
+        <h2>Faça sua pergunta</h2>
+        <form class="form" action="">
+            <label class="sr-only" for="question">Pergunta para ser feita</label>
+            <textarea class="input-area" id="question" placeholder="O que você quer perguntar?"></textarea>
+            <div class="footer">
+                <div class="info">
+                    <i class="icon-lock"></i>
+                    Esta pergunta é anônima
                 </div>
-                <div class="room-create btn btn_colorful">
-                    <i class="icon-users"></i>
-                    Criar Sala
+                <input type="submit" class="btn-enviar btn btn_colorful" value="Enviar">
+            </div>
+        </form>
+    </div>
+    <div id="cards" class="container">
+
+        <div class="card card_unread">
+            <div class="question">
+                <div class="avatar">
+                    <i class="icon-user"></i>
+                    <img>
+                </div>
+                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto dolores aut
+                    aliquam minima voluptatum fugiat rem, velit optio. Deserunt facilis numquam provident officia,
+                    fuga ea!</p>
+            </div>
+            <div class="actions">
+                <div class="read">
+                    <i class="icon-check"></i>
+                    Marcar como lida
+                </div>
+                <div class="trash">
+                    <i class="icon-trash"></i>
+                    Excluir
                 </div>
             </div>
-        </header>
-        <div id="input" class="container">
-            <h2>Faça sua pergunta</h2>
-            <form class="form" action="">
-                <label class="sr-only" for="question">Pergunta para ser feita</label>
-                <textarea class="input-area" id="question" placeholder="O que você quer perguntar?"></textarea>
-                <div class="footer">
-                    <div class="info">
-                        <i class="icon-lock"></i>
-                        Esta pergunta é anônima
+        </div>
+
+        <div class="card card_unread">
+            <div class="question">
+                <div class="avatar">
+                    <i class="icon-user"></i>
+                    <img>
+                </div>
+                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto dolores aut
+                    aliquam minima voluptatum fugiat rem, velit optio. Deserunt facilis numquam provident officia,
+                    fuga ea!</p>
+            </div>
+            <div class="actions">
+                <div class="read">
+                    <i class="icon-check"></i>
+                    Marcar como lida
+                </div>
+                <div class="trash">
+                    <i class="icon-trash"></i>
+                    Excluir
+                </div>
+            </div>
+        </div>
+
+        <div class="card card_unread">
+            <div class="question">
+                <div class="avatar">
+                    <i class="icon-user"></i>
+                    <img>
+                </div>
+                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto dolores aut
+                    aliquam minima voluptatum fugiat rem, velit optio. Deserunt facilis numquam provident officia,
+                    fuga ea!</p>
+            </div>
+            <div class="actions">
+                <div class="read">
+                    <i class="icon-check"></i>
+                    Marcar como lida
+                </div>
+                <div class="trash">
+                    <i class="icon-trash"></i>
+                    Excluir
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card card_unread">
+            <div class="question">
+                <div class="avatar">
+                    <i class="icon-user"></i>
+                    <img>
+                </div>
+                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto dolores aut
+                    aliquam minima voluptatum fugiat rem, velit optio. Deserunt facilis numquam provident officia,
+                    fuga ea!</p>
+            </div>
+            <div class="actions">
+                <div class="read">
+                    <i class="icon-check"></i>
+                    Marcar como lida
+                </div>
+                <div class="trash">
+                    <i class="icon-trash"></i>
+                    Excluir
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card card_read">
+            <div class="question">
+                <div class="avatar">
+                    <i class="icon-user"></i>
+                    <img>
+                </div>
+                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto dolores aut
+                    aliquam minima voluptatum fugiat rem, velit optio. Deserunt facilis numquam provident officia,
+                    fuga ea!</p>
+            </div>
+            <div class="actions">
+                <div class="read">
+                    <i class="icon-check"></i>
+                    Pergunta lida
+                </div>
+                <div class="unread">
+                    <i class="icon-check"></i>
+                    Marcar como lida
+                </div>
+                <div class="trash">
+                    <i class="icon-trash"></i>
+                    Excluir
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- MODAL -->
+
+    <div class="modal-wrapper hidden">
+        <div class="modal">
+            <h2>Excluir</h2>
+            <p>Tem certeza que você deseja excluir a pergunta?</p>
+            <form action="">
+                <label class="sr-only" for="password">Digite a sua senha</label>
+                <input class="input-area" type="password" id="password" name="password"
+                    placeholder="Digite a sua senha" />
+
+                <div class="buttons">
+                    <div class="btn btn_fadded">
+                        Cancelar
                     </div>
-                    <input type="submit" class="btn-enviar btn btn_colorful" value="Enviar">
+                    <div class="btn btn_warning">
+                        Sim, excluir
+                    </div>
                 </div>
             </form>
-        </div>
-        <div id="cards" class="container">
-
-            <div class="card card_unread">
-                <div class="question">
-                    <div class="avatar">
-                        <i class="icon-user"></i>
-                        <img>
-                    </div>
-                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto dolores aut
-                        aliquam minima voluptatum fugiat rem, velit optio. Deserunt facilis numquam provident officia,
-                        fuga ea!</p>
-                </div>
-                <div class="buttons">
-                    <div class="read">
-                        <i class="icon-check"></i>
-                        Marcar como lida
-                    </div>
-                    <div class="trash">
-                        <i class="icon-trash"></i>
-                        Excluir
-                    </div>
-                </div>
-            </div>
-
-            <div class="card card_unread">
-                <div class="question">
-                    <div class="avatar">
-                        <i class="icon-user"></i>
-                        <img>
-                    </div>
-                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto dolores aut
-                        aliquam minima voluptatum fugiat rem, velit optio. Deserunt facilis numquam provident officia,
-                        fuga ea!</p>
-                </div>
-                <div class="buttons">
-                    <div class="read">
-                        <i class="icon-check"></i>
-                        Marcar como lida
-                    </div>
-                    <div class="trash">
-                        <i class="icon-trash"></i>
-                        Excluir
-                    </div>
-                </div>
-            </div>
-            
-            <div class="card card_unread">
-                <div class="question">
-                    <div class="avatar">
-                        <i class="icon-user"></i>
-                        <img>
-                    </div>
-                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto dolores aut
-                        aliquam minima voluptatum fugiat rem, velit optio. Deserunt facilis numquam provident officia,
-                        fuga ea!</p>
-                </div>
-                <div class="buttons">
-                    <div class="read">
-                        <i class="icon-check"></i>
-                        Marcar como lida
-                    </div>
-                    <div class="trash">
-                        <i class="icon-trash"></i>
-                        Excluir
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="card card_unread">
-                <div class="question">
-                    <div class="avatar">
-                        <i class="icon-user"></i>
-                        <img>
-                    </div>
-                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto dolores aut
-                        aliquam minima voluptatum fugiat rem, velit optio. Deserunt facilis numquam provident officia,
-                        fuga ea!</p>
-                </div>
-                <div class="buttons">
-                    <div class="read">
-                        <i class="icon-check"></i>
-                        Marcar como lida
-                    </div>
-                    <div class="trash">
-                        <i class="icon-trash"></i>
-                        Excluir
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="card card_read">
-                <div class="question">
-                    <div class="avatar">
-                        <i class="icon-user"></i>
-                        <img>
-                    </div>
-                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto dolores aut
-                        aliquam minima voluptatum fugiat rem, velit optio. Deserunt facilis numquam provident officia,
-                        fuga ea!</p>
-                </div>
-                <div class="buttons">
-                    <div class="read">
-                        <i class="icon-check"></i>
-                        Pergunta lida
-                    </div>
-                    <div class="unread">
-                        <i class="icon-check"></i>
-                        Marcar como lida
-                    </div>
-                    <div class="trash">
-                        <i class="icon-trash"></i>
-                        Excluir
-                    </div>
-                </div>
-            </div>
 
         </div>
-    <main>
+    </div>
 
-    </main>
 </body>
 
 </html>

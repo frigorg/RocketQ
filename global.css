@@ -83,6 +83,9 @@ h2 {
     white-space: nowrap;
 }
 
+.hidden {
+    display: none;
+}
 
 .btn {
     display: flex;
@@ -119,6 +122,23 @@ h2 {
 .btn_white:hover {
     color: var(--main-color-hover);
     border: 2px solid var(--main-color-hover);
+}
+
+.btn_warning {
+    color: var(--background-color);
+    background-color: var(--highlight-color);
+}
+
+.btn_warning:hover {
+    background-color: var(--highlight-color-hover);
+}
+
+.btn_fadded {
+    color: var(--text-color1);
+    background-color: var(--light-color-fadded);
+}
+
+.btn_warning:hover {
 }
 
 .input-area {

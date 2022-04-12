@@ -94,7 +94,6 @@
 }
 
 #cards .card {
-    height: 13.6rem;
     border-radius: 0.8rem;
     border-top-left-radius: 0;
 }
@@ -126,6 +125,12 @@
     border-radius: 50%;
 }
 
+#cards .question p {
+    min-width: 5.2rem;
+    word-break: break-all;
+    width: 100%;
+}
+
 #cards .card.card_unread {
     background-color: var(--light-color);
 }
@@ -154,7 +159,7 @@
     background-color: var(--light-color-fadded);
 }
 
-#cards .buttons {
+#cards .actions {
     display: flex;
     margin: 0 2.4rem;
     gap: 2.4rem;
@@ -162,7 +167,7 @@
     justify-content: end;
 }
 
-#cards .buttons i {
+#cards .actions i {
     font-size: 2.4rem;
 }
 
@@ -172,4 +177,50 @@
 
 #cards .icon-trash {
     color: var(--highlight-color);
+}
+
+/* MODAL */
+
+.modal-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--overlay-color);
+    z-index: 50;
+}
+
+.modal {
+    position: fixed;
+    padding: 6.4rem;
+    height: 45%;
+    width: 45%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--background-color);
+}
+
+.modal h2 {
+    text-align: center;
+    margin-bottom: 1.2rem;
+}
+
+.modal p {
+    text-align: center;
+    margin-bottom: 2.4rem;
+}
+
+.modal form {
+    width: 30.2rem;
+    margin: 0 auto;
+}
+
+.modal form input {
+    margin-bottom: 4rem;
+}
+.modal .buttons {
+    display: flex;
+    gap: 0.8rem;
 }
