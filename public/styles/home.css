@@ -28,7 +28,7 @@ body {
 .bg-image {
     z-index: -1;
     grid-area: left;
-    background: url(assets/img/bg_ilustration.svg) no-repeat top/contain;
+    background: url(../images/bg_ilustration.svg) no-repeat top/contain;
 }
 
 .bg-circle::after {

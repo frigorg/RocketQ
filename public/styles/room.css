@@ -94,12 +94,13 @@
 }
 
 #cards .card {
+    padding: 2.4rem;
     border-radius: 0.8rem;
     border-top-left-radius: 0;
 }
 
 #cards .question {
-    margin: 2.4rem;
+    margin-bottom: 0.8rem;
     display: flex;
 }
 

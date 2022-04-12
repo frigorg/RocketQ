@@ -1,0 +1,45 @@
+/* MODAL */
+
+.modal-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--overlay-color);
+    z-index: 50;
+}
+
+.modal {
+    position: fixed;
+    padding: 6.4rem;
+    height: 45%;
+    width: 45%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--background-color);
+}
+
+.modal h2 {
+    text-align: center;
+    margin-bottom: 1.2rem;
+}
+
+.modal p {
+    text-align: center;
+    margin-bottom: 2.4rem;
+}
+
+.modal form {
+    width: 30.2rem;
+    margin: 0 auto;
+}
+
+.modal form input {
+    margin-bottom: 4rem;
+}
+.modal .buttons {
+    display: flex;
+    gap: 0.8rem;
+}
