@@ -32,14 +32,17 @@
 }
 
 .modal form {
-    width: 30.2rem;
+    width: 50.2rem;
     margin: 0 auto;
 }
 
 .modal form input {
+    width: 30.2rem;
+    margin: 0 auto;
     margin-bottom: 4rem;
 }
 .modal .buttons {
+    white-space: nowrap;
     display: flex;
     gap: 0.8rem;
 }

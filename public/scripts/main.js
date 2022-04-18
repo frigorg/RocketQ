@@ -19,7 +19,16 @@ unread_cards_readbtn.forEach((readbtn)=>{
     })
 })
 
-const modal_wrapper = document.querySelector(".modal-wrapper")
+const modal_wrapper = document.querySelector(".modal-wrapper");
 
-modal_wrapper.querySelector(".btn.cancel").addEventListener("click", e => {modal.close()})
-modal_wrapper.querySelector(".btn.proceed").addEventListener("click", e => {modal.close()})
+const modal_form = modal_wrapper.querySelector("form");
+
+modal_wrapper.querySelector(".btn.cancel").addEventListener("click", e => {
+    modal.close()
+})
+
+modal_wrapper.querySelector(".btn.proceed").addEventListener("click", e => {
+    const room = document.querySelector("#room-id").dataset.id;
+    modal_form.setAttribute("action", `/post/${room}/:question/:action`);
+    modal.close()
+})

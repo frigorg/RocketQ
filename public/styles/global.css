@@ -104,12 +104,12 @@ h2 {
 }
 
 
-.btn_colorful {
+.btn_normal {
     color: var(--background-color);
     background-color: var(--main-color);
 }
 
-.btn_colorful:hover {
+.btn_normal:hover {
     background-color: var(--main-color-hover);
 }
 

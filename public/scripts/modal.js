@@ -12,12 +12,16 @@ export default function Modal(){
         modal_wrapper.querySelector("h2").innerHTML = "Excluir pergunta";
         modal_wrapper.querySelector("p").innerHTML = "Tem certeza que voçê deseja excluir esta pergunta?";
         modal_wrapper.querySelector(".proceed").innerHTML = "Sim, excluir";
+        modal_wrapper.querySelector(".proceed").classList.add("btn_warning");
+        modal_wrapper.querySelector(".proceed").classList.remove("btn_normal");
 
     }
     function changeToReadModal() {
-        modal_wrapper.querySelector("h2").innerHTML = "Confirmar leitura";
-        modal_wrapper.querySelector("p").innerHTML = "Tem certeza que voçê deseja marcar esta pergunta como lida?";
-        modal_wrapper.querySelector(".proceed").innerHTML = "Sim, marcar";
+        modal_wrapper.querySelector("h2").innerHTML = "Marcar como lido";
+        modal_wrapper.querySelector("p").innerHTML = "Tem certeza que você deseja marcar esta pergunta como lida?";
+        modal_wrapper.querySelector(".proceed").innerHTML = "Sim, marcar como lida";
+        modal_wrapper.querySelector(".proceed").classList.add("btn_normal");
+        modal_wrapper.querySelector(".proceed").classList.remove("btn_warning");
     }
 
     return {
