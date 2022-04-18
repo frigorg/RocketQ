@@ -46,3 +46,26 @@
     display: flex;
     gap: 0.8rem;
 }
+
+@media screen and (max-width: 1390px) {
+    
+    .modal {
+        height: 80%;
+        width: 90%;
+    }
+
+    .modal form {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .modal .buttons {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .modal form input {
+        width: 100%;
+    }
+}

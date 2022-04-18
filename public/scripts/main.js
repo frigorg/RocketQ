@@ -28,7 +28,7 @@ modal_wrapper.querySelector(".btn.cancel").addEventListener("click", e => {
 })
 
 modal_wrapper.querySelector(".btn.proceed").addEventListener("click", e => {
-    const room = document.querySelector("#room-id").dataset.id;
-    modal_form.setAttribute("action", `/post/${room}/:question/:action`);
+    const roomId = document.querySelector("#room-id").dataset.id;
+    modal_form.setAttribute("action", `/post/${roomId}/${questionId}/:action`);
     modal.close()
 })
