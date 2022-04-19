@@ -2,33 +2,39 @@ import Modal from './modal.js'
 
 const modal = Modal();
 
-const unread_cards_trashbtn = document.querySelectorAll(".card_unread .actions .trash");
-const unread_cards_readbtn = document.querySelectorAll(".card_unread .actions .read");
+const cards = document.querySelectorAll("#cards .card")
 
-unread_cards_trashbtn.forEach((trashbtn)=>{
-    trashbtn.addEventListener("click", e => {
+const modal_wrapper = document.querySelector(".modal-wrapper");
+
+cards.forEach((card) => {
+    card.querySelector(".trash").addEventListener("click", btn => {
+        const id = card.querySelector(".question").dataset.id;
+        modal_wrapper.dataset.id = id;
+        modal_wrapper.dataset.action = "delete";
         modal.changeToDeleteModal();
         modal.open()
     })
-})
-
-unread_cards_readbtn.forEach((readbtn)=>{
-    readbtn.addEventListener("click", e => {
+    card.querySelector(".read").addEventListener("click", btn => {
+        const id = card.querySelector(".question").dataset.id;
+        modal_wrapper.dataset.id = id;
+        modal_wrapper.dataset.action = "read";
         modal.changeToReadModal();
         modal.open()
     })
 })
 
-const modal_wrapper = document.querySelector(".modal-wrapper");
+modal_wrapper.querySelector(".btn.cancel").addEventListener("click", e => {
+    modal_wrapper.dataset.id = "";
+    modal.close();
+})
 
 const modal_form = modal_wrapper.querySelector("form");
 
-modal_wrapper.querySelector(".btn.cancel").addEventListener("click", e => {
-    modal.close()
-})
-
 modal_wrapper.querySelector(".btn.proceed").addEventListener("click", e => {
     const roomId = document.querySelector("#room-id").dataset.id;
-    modal_form.setAttribute("action", `/post/${roomId}/${questionId}/:action`);
-    modal.close()
+    const questionId = modal_wrapper.dataset.id;
+    const action = modal_wrapper.dataset.action;
+    modal_form.setAttribute("action", `/question/${roomId}/${questionId}/${action}`);
+    if (modal_wrapper.querySelector("#password").value != "")
+        modal.close();
 })

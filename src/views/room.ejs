@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="styles/global.css">
-    <link rel="stylesheet" href="styles/room.css">
-    <link rel="stylesheet" href="styles/modal.css">
-    <link rel="stylesheet" href="icons/icomoon/style.css">
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/room.css">
+    <link rel="stylesheet" href="/styles/modal.css">
+    <link rel="stylesheet" href="/icons/icomoon/style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,7 +24,9 @@
 
 <body>
     <header id="header" class="container">
-        <img class="logo" src="images/logo.svg">
+        <a href="/">
+            <img class="logo" src="/images/logo.svg">
+        </a>
         <div class="buttons">
             <div id="room-id" data-id="323243" class="room-code btn btn_white">
                 #323243
@@ -161,7 +163,7 @@
                     <i class="icon-check"></i>
                     Marcar como lida
                 </div>
-               <div class="trash">
+                <div class="trash">
                     <i class="icon-trash"></i>
                     Excluir
                 </div>
@@ -178,15 +180,15 @@
             <p></p>
             <form action="#" method="POST">
                 <label class="sr-only" for="password">Digite a sua senha</label>
-                <input class="input-area" type="password" id="password" name="password"
-                    placeholder="Digite a sua senha" required/>
+                <input class="input-area" type="password" id="password" name="password" placeholder="Digite a sua senha"
+                    required />
 
                 <div class="buttons">
                     <div class="btn btn_fadded cancel">
                         Cancelar
                     </div>
-                    <div class="btn proceed">
-                    </div>
+                    <button class="btn proceed">
+                    </button>
                 </div>
             </form>
 
