@@ -4,7 +4,8 @@
   "description": "Project from Rocketseat course NLW6 Discovery.",
   "main": "main.js",
   "scripts": {
-    "start": "nodemon src/server.js"
+    "start": "nodemon src/server.js",
+    "init-db": "node src/db/init.js"
   },
   "repository": {
     "type": "git",
