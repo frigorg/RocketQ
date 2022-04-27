@@ -28,21 +28,23 @@
             <img class="logo" src="/images/logo.svg">
         </a>
         <div class="buttons">
-            <div id="room-id" data-id="323243" class="room-code btn btn_white">
-                #323243
-                <i class="icon-copy"></i>
+            <div id="room-id" data-id="<%= roomId %>" class="room-code btn btn_white">
+                #<%= roomId %>
+                    <i class="icon-copy"></i>
             </div>
-            <div class="room-create btn btn_normal">
-                <i class="icon-users"></i>
-                Criar Sala
-            </div>
+            <a href="/create-pass">
+                <div class="room-create btn btn_normal">
+                    <i class="icon-users"></i>
+                    Criar Sala
+                </div>
+            </a>
         </div>
     </header>
     <div id="input" class="container">
         <h2>Faça sua pergunta</h2>
-        <form class="form" action="">
+        <form class="form" action="/question/create/<%= roomId %>" method="POST">
             <label class="sr-only" for="question">Pergunta para ser feita</label>
-            <textarea class="input-area" id="question" placeholder="O que você quer perguntar?"></textarea>
+            <textarea class="input-area" name="question" id="question" placeholder="O que você quer perguntar?"></textarea>
             <div class="footer">
                 <div class="info">
                     <i class="icon-lock"></i>
@@ -53,6 +55,16 @@
         </form>
     </div>
     <div id="cards" class="container">
+
+
+        <% questions.array.forEach(e => {
+
+        }) %>
+
+
+
+
+
 
         <div class="card card_unread">
             <div class="question" data-id="5">
@@ -98,6 +110,7 @@
             </div>
         </div>
 
+        
         <div class="card card_unread">
             <div class="question" data-id="3">
                 <div class="avatar">
