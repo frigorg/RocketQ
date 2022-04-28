@@ -3,12 +3,9 @@ const Database = require('../db/config')
 module.exports = {
     async open(req, res){
         const roomId = req.params.roomId
-        res.render('room', {roomId: roomId})
-
         const db = await Database()
-        const questions = await db.all(`SELECT title
-        FROM questions
-        WHERE room = ${roomId}`)
+
+        const questions = await db.all(`SELECT * FROM questions WHERE room = ${roomId}`)
 
         res.render("room", {roomId: roomId, questions: questions})
 
