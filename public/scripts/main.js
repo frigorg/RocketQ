@@ -14,7 +14,7 @@ cards.forEach((card) => {
         modal.changeToDeleteModal();
         modal.open()
     })
-    card.querySelector(".read").addEventListener("click", btn => {
+    card.querySelector(".unread").addEventListener("click", btn => {
         const id = card.querySelector(".question").dataset.id;
         modal_wrapper.dataset.id = id;
         modal_wrapper.dataset.action = "read";

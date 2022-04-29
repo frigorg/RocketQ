@@ -56,135 +56,24 @@
     </div>
     <div id="cards" class="container">
 
-
         <% 
-        console.log(questions) 
-        questions.forEach(e => { 
-            let variavel = "a"
-            variavel += "a" %>
-
-        <p> <%= variavel %> </p>
-
-
+        let id = ''
+        let cardType = ''
+        let title = ''
+        questionsUnread.forEach(e => { 
+            cardId = e.id
+            title = e.title
+            cardType = "card_unread"
+        %> 
+        <%- include("parts/card", {cardId: cardId, cardType: cardType, title: title}) %>
         <% }) %>
-
-
-        <div class="card card_unread">
-            <div class="question" data-id="5">
-                <div class="avatar">
-                    <i class="icon-user"></i>
-                    <img>
-                </div>
-                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto dolores aut
-                    aliquam minima voluptatum fugiat rem, velit optio. Deserunt facilis numquam provident officia,
-                    fuga ea!</p>
-            </div>
-            <div class="actions">
-                <a class="read">
-                    <i class="icon-check"></i>
-                    Marcar como lida
-                </a>
-                <a class="trash">
-                    <i class="icon-trash"></i>
-                    Excluir
-                </a>
-            </div>
-        </div>
-
-        <div class="card card_unread">
-            <div class="question" data-id="4">
-                <div class="avatar">
-                    <i class="icon-user"></i>
-                    <img>
-                </div>
-                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto dolores aut
-                    aliquam minima voluptatum fugiat rem, velit optio. Deserunt facilis numquam provident officia,
-                    fuga ea!</p>
-            </div>
-            <div class="actions">
-                <a class="read">
-                    <i class="icon-check"></i>
-                    Marcar como lida
-                </a>
-                <a class="trash">
-                    <i class="icon-trash"></i>
-                    Excluir
-                </a>
-            </div>
-        </div>
-
-        
-        <div class="card card_unread">
-            <div class="question" data-id="3">
-                <div class="avatar">
-                    <i class="icon-user"></i>
-                    <img>
-                </div>
-                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto dolores aut
-                    aliquam minima voluptatum fugiat rem, velit optio. Deserunt facilis numquam provident officia,
-                    fuga ea!</p>
-            </div>
-            <div class="actions">
-                <a class="read">
-                    <i class="icon-check"></i>
-                    Marcar como lida
-                </a>
-                <a class="trash">
-                    <i class="icon-trash"></i>
-                    Excluir
-                </a>
-            </div>
-        </div>
-
-
-        <div class="card card_unread">
-            <div class="question" data-id="2">
-                <div class="avatar">
-                    <i class="icon-user"></i>
-                    <img>
-                </div>
-                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto dolores aut
-                    aliquam minima voluptatum fugiat rem, velit optio. Deserunt facilis numquam provident officia,
-                    fuga ea!</p>
-            </div>
-            <div class="actions">
-                <a class="read">
-                    <i class="icon-check"></i>
-                    Marcar como lida
-                </a>
-                <a class="trash">
-                    <i class="icon-trash"></i>
-                    Excluir
-                </a>
-            </div>
-        </div>
-
-
-        <div class="card card_read">
-            <div class="question" data-id="1">
-                <div class="avatar">
-                    <i class="icon-user"></i>
-                    <img>
-                </div>
-                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto dolores aut
-                    aliquam minima voluptatum fugiat rem, velit optio. Deserunt facilis numquam provident officia,
-                    fuga ea!</p>
-            </div>
-            <div class="actions">
-                <div class="read">
-                    <i class="icon-check"></i>
-                    Pergunta lida
-                </div>
-                <div class="unread">
-                    <i class="icon-check"></i>
-                    Marcar como lida
-                </div>
-                <div class="trash">
-                    <i class="icon-trash"></i>
-                    Excluir
-                </div>
-            </div>
-        </div>
+        <% questionsRead.forEach(e => { 
+            cardId = e.id
+            title = e.title
+            cardType = "card_read"
+        %> 
+        <%- include("parts/card", {cardId: cardId, cardType: cardType, title: title}) %>
+        <% }) %>
 
     </div>
 

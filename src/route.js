@@ -1,10 +1,8 @@
 const express = require('express');
 const QuestionController = require('./Controllers/QuestionController.js');
+const RoomController = require('./Controllers/RoomController.js');
 
 const route = express.Router()
-
-const questionController = require('./Controllers/QuestionController.js');
-const RoomController = require('./Controllers/RoomController.js');
 
 route.get('/', (req, res)=> res.render('index', {page: 'enter-room'}));
 route.get('/create-pass', (req, res)=> res.render('index', {page: 'create-pass'}));

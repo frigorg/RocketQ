@@ -101,6 +101,7 @@
 
 #cards .question {
     margin-bottom: 0.8rem;
+    padding-right: 2.4rem;
     display: flex;
 }
 
@@ -152,7 +153,7 @@
     display: none;
 }
 
-#cards .card.card_read .unread {
+#cards .card.card_unread .read {
     display: none;
 }
 

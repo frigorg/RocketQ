@@ -1,0 +1,22 @@
+<div class="card <%= cardType %>">
+    <!--card_unread | card_read-->
+    <div class="question" data-id="<%= cardId %>">
+        <div class="avatar">
+            <i class="icon-user"></i>
+            <img>
+        </div>
+        <p class="text">
+            <%= title %>
+        </p>
+    </div>
+    <div class="actions">
+        <div class="unread">
+            <i class="icon-check"></i>
+            Marcar como lida
+        </div>
+        <a class="trash">
+            <i class="icon-trash"></i>
+            Excluir
+        </a>
+    </div>
+</div>
